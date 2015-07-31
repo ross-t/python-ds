@@ -5,7 +5,6 @@ from heapq import heappush, heappop, heapify
 
 # Graph: Adjacency list is a hash table where each vertex is associated with an array of tuples. The tuples
 # represent edges and are in the format of (to_vertex, weight).
-
 class DisjointSet:
 	def __init__(self):
 		self.sets = set()
@@ -63,7 +62,7 @@ class Graph:
 
 	def is_weakly_connected(self):
 		if len(self.graph.keys()) == 0:
-			return True # Not that that's a very useful connected graph, but hey
+			return True
 
 		reachable = self.dfs(random.choice(self.graph.keys()))
 		return len(reachable) == len(self.graph.keys())
@@ -175,7 +174,6 @@ def from_file(filename):
 		return g
 
 class GraphAlgos:
-	
 	@staticmethod
 	def floyd_warshall(g):
 		num_verts = len(g.graph.keys())
@@ -191,9 +189,7 @@ class GraphAlgos:
 			for i in range(num_verts):
 				for j in range(num_verts):
 					if dist[i][k] + dist[k][j] < dist[i][j]:
-						#print "Distance from %d->%d + %d->%d < %d->%d" % (i, k, k, j, i, j)
 						dist[i][j] = dist[i][k] + dist[k][j]
-						#print "\t...so dist[%d][%d] is now %d->%d + %d->%d (%d)" % (i, j, i, k, k, j, dist[i][j])
 						npaths[i][j] = npaths[i][k]
 		return (dist, npaths)
 
@@ -262,7 +258,6 @@ def write_kruskals(original, min_span, filename):
 		outfile.write('}')
 
 if __name__ == '__main__':
-	#def random_simple_graph(vertex_start, vertex_end, num_edges, is_directed, is_connected, min_weight=1, max_weight=1):
 	g = Graph.random_simple_graph(0, 9, 6, True, True, 1, 15)
 	g2 = Graph.random_simple_graph(0, 10, 8, True, True, 1, 6)
 
@@ -276,6 +271,7 @@ if __name__ == '__main__':
 	print res
 	print 'FW 2 distance matrix'
 	print res2
+	# Also try these:
 	#write_kruskals(g, res, 'kruskals_result_3')
 	#g.save_image('floydtest_span')
 	#print_results(10, 200, 10)
