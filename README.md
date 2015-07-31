@@ -14,3 +14,5 @@ There's a disjoint set in there, too.
 [mergesort.py](Sorting/mergesort.py) is mergesort. Surprise!
 
 [quicksort.py](Sorting/quicksort.py) is quicksort. Surprise again!
+
+[MatrixChainMultiplication.py](Matrices/MatrixChainMultiplication.py) is a dynamic programming solution to the matrix chain multiplication problem. It requires numpy.
