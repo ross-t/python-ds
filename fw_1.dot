@@ -1,0 +1,13 @@
+digraph {	8 -> 5[label="7",weight="7"];
+	0 -> 6[label="11",weight="11"];
+	1 -> 2[label="14",weight="14"];
+	3 -> 6[label="11",weight="11"];
+	3 -> 9[label="3",weight="3"];
+	6 -> 6[label="1",weight="1"];
+	5 -> 8[label="1",weight="1"];
+	7 -> 5[label="1",weight="1"];
+	1 -> 6[label="1",weight="1"];
+	4 -> 5[label="11",weight="11"];
+	2;
+	9;
+}
