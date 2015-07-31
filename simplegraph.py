@@ -1,4 +1,3 @@
-#graph = {1: [2,3,4], 2: [1,3,4], 3:[1,2,4], 4:[1,2,3,6], 5:[6,7,8], 6:[4,5,7], 7:[5,6,8], 8:[5,7]}
 graph = {'a':'bc', 'b':'de', 'e':'h', 'c':'fg'}
 
 def seen_all(visited, graph):
@@ -39,8 +38,3 @@ def components(g):
 if __name__ == '__main__':
 	g = {'a':'bc', 'b':'a', 'c':'a', 'd':'ef', 'e': 'df', 'f':'de','g':'hi', 'h':'gi', 'i': 'gh'}
 	print components(g)
-
-g = {'a':'bc', 'b':'a', 'c':'a', 'd':'ef', 'e': 'df', 'f':'de','g':'hi', 'h':'gi', 'i': 'gh'}
-def main():
-	global g
-	components(g)
