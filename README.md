@@ -10,3 +10,7 @@ There's a disjoint set in there, too.
 [hashtable.py](Tables/hashtable.py) is a simple hash table implementation.
 
 [splay_tree.py](Trees/splay_tree.py) implements a key-value storage splay tree.
+
+[mergesort.py](Sorting/mergesort.py) is mergesort. Surprise!
+
+[quicksort.py](Sorting/quicksort.py) is quicksort. Surprise again!
