@@ -1,6 +1,8 @@
 #python-ds
 A collection of sample data structures and algorithms implemented in Python. The intention isn't that you should use these in production, it's for you to learn from them (and trust me, they're not perfect; many are intentionally simplified to make them more easily understandable, even when it sacrifices proper details and makes performance worse)
 
+Feel free to make a pull request to submit your own!
+
 
 #Graphs
 [graphpaths.py](Graphs/graphs.py) requires numpy. It's an implementation of Floyd-Warshall and Kruskal's algorithms. You can use it to generate random simple graphs and it has the (limited) ability to create files readable by graphviz, but only under some circumstances (and it desperately needs cleaning up). If you actually need to work with graphs in Python, I recommend using [networkx](https://networkx.github.io/).
