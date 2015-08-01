@@ -22,4 +22,5 @@ There's a disjoint set in there, too.
 
 #Trees
 [splay_tree.py](Trees/splay_tree.py) implements a key-value storage splay tree.
+
 [binaryheap.py](Trees/binaryheap.py) is a min-heap implemented with array storage.
