@@ -50,7 +50,7 @@ class ProbabilisticArray(object):
 					new[key] += probability
 				else:
 					new[key] = probability
-			ProbabilisticArray.normalize(new)
+			new.normalize()
 			return new
 
 	def __sub__(self, other):
@@ -67,18 +67,17 @@ class ProbabilisticArray(object):
 						del new[key]
 					else:
 						new[key] = new_probability
-			ProbabilisticArray.normalize(new)
+			new.normalize()
 			return new
 
 	def __delitem__(self, item):
 		del self.map[item]
 
-	@staticmethod
-	def normalize(array_to_normalize):
+	def normalize(self):
 		'''Normalize the probabilities in an array so that the sum of the entries is 1.'''
-		if not array_to_normalize.normalized:
-			array_sum = array_to_normalize._sum()
-			for key in array_to_normalize.map.keys():
-				value = array_to_normalize.map[key]
-				array_to_normalize.map[key] = value / array_sum
-			array_to_normalize.normalized = True
+		if not self.normalized:
+			array_sum = self._sum()
+			for key in self.map.keys():
+				value = self.map[key]
+				self.map[key] = value / array_sum
+			self.normalized = True
